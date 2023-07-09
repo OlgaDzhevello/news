@@ -25,8 +25,15 @@ h1 {
     background-color: #fff;
 }
 
+/*  Каждая четная новость*/
 article:nth-of-type(even) {
     background-color: #E0E8F4
+}
+
+/* Первые две новости - пометка NEW */
+article:first-of-type h2::before, article:nth-of-type(2) h2::before { 
+    content: "New! ";
+    color: red;
 }
 
 /* новость */
@@ -34,12 +41,7 @@ article {
     width: 768px;
     margin: 0 auto 0px;
     padding: 6px 15px;
-    border-bottom: 1px solid rgb(128, 128, 128);
-}
-
-article:first-of-type h2::before, article:nth-of-type(2) h2::before { 
-        content: "New! ";
-        color: red;
+    border-bottom: 1px solid rgb(128, 128, 128)
 }
     
 article a, p {
